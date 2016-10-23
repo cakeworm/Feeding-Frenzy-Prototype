@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RayShooter : MonoBehaviour
+public class GUICursor : MonoBehaviour
 {
     private Camera _camera;
 
@@ -20,7 +20,7 @@ public class RayShooter : MonoBehaviour
         GUI.Label (new Rect (posX, posY, size, size), "*");
     }
 
-    void Update()
+    /*void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -52,5 +52,6 @@ public class RayShooter : MonoBehaviour
         
         Destroy (sphere);
     }
+    */
 
 }
