@@ -10,6 +10,7 @@ public class WeaponSwitch : MonoBehaviour
     {
         weapons[0].gameObject.SetActive(true);
         weapons[1].gameObject.SetActive(false);
+        weapons[2].gameObject.SetActive(false);
     }
 
      void Update()
@@ -22,6 +23,11 @@ public class WeaponSwitch : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
         changeWeapon(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+        changeWeapon(2);
         }
 
     }
