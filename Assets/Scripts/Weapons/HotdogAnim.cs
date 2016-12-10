@@ -4,7 +4,7 @@ using System.Collections;
 public class HotdogAnim : MonoBehaviour {
 
     public Animator anim;
-    bool firePressed;
+
 
     void Awake()
     {
@@ -23,6 +23,8 @@ public class HotdogAnim : MonoBehaviour {
 
     void Swing ()
     {
+        bool firePressed;
+
         firePressed = true;
 
         anim.SetTrigger ("Fire Pressed");

@@ -4,6 +4,7 @@ using System.Collections;
 public class PeaShooter : MonoBehaviour {
 
     //private GameObject peaShooter;
+    public GameObject[] peaSplats;
 
     void Update()
     {
@@ -21,23 +22,17 @@ public class PeaShooter : MonoBehaviour {
                 ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
                 if (target != null)
                 {
+                    
                     target.ReactToHit();
+
                 }
                 else
                 {
-                    StartCoroutine(SphereIndicator(hit.point));
+                    Instantiate (peaSplats[Random.Range(0,2)], hit.point, Quaternion.FromToRotation(Vector3.up,hit.normal));
                 }
             }
         }
     }
 
-    private IEnumerator SphereIndicator (Vector3 pos)
-    {
-        GameObject sphere = GameObject.CreatePrimitive (PrimitiveType.Sphere);
-        sphere.transform.position = pos;
-
-        yield return new WaitForSeconds (1);
-        
-        Destroy (sphere);
-    }
+   
 }
