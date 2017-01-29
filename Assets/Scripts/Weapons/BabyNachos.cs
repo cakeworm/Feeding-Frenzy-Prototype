@@ -9,7 +9,7 @@ public class BabyNachos : MonoBehaviour {
     public GameObject cheeseSplat_1;
     public GameObject cheeseSplat_2;
 
-    //public int damage = 1;
+    public int food = 1;
 
     void Start()
     {
@@ -32,12 +32,16 @@ public class BabyNachos : MonoBehaviour {
         Vector3 pos = contact.point;
 
         GameObject hitObject = collision.transform.gameObject;
-        ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+       
+        //ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+        EnemyHealth enemyHealth = hitObject.GetComponent<EnemyHealth>();
 
-        if (target != null)
+
+
+        if (enemyHealth != null)
         {
                     
-            target.ReactToHit();
+          enemyHealth.TakeDamage(food, pos);
         }
         else
         {

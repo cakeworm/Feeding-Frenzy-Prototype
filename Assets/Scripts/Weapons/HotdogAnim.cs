@@ -4,11 +4,13 @@ using System.Collections;
 public class HotdogAnim : MonoBehaviour {
 
     public Animator anim;
+    public CapsuleCollider activeDog;
 
 
     void Awake()
     {
        anim = GetComponent<Animator>();
+       activeDog = GetComponentInChildren<CapsuleCollider> ();
 
 
     }
@@ -23,13 +25,23 @@ public class HotdogAnim : MonoBehaviour {
 
     void Swing ()
     {
-        bool firePressed;
+        //bool firePressed;
 
-        firePressed = true;
+        //firePressed = true;
 
-        anim.SetTrigger ("Fire Pressed");
+        anim.SetTrigger ("Fire Pressed");       
+    }
 
-       
+
+
+    void ActivateDog()
+    {
+        activeDog.isTrigger = false;
+    }
+
+    void InactivateDog()
+    {
+        activeDog.isTrigger = true;
     }
 
 }

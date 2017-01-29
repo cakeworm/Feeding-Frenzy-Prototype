@@ -8,6 +8,8 @@ public class Nachos : MonoBehaviour {
     public GameObject cheeseSplat_1;
     public GameObject cheeseSplat_2;
 
+    public int food = 1;
+
     [SerializeField] private GameObject babyNachosPrefab;
     private GameObject _babyNachos;
 
@@ -33,12 +35,14 @@ public class Nachos : MonoBehaviour {
         Vector3 pos = contact.point;
 
         GameObject hitObject = collision.transform.gameObject;
-        ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+        EnemyHealth enemyHealth = hitObject.GetComponent<EnemyHealth>();
 
-        if (target != null)
+        if (enemyHealth != null)
         {
-            target.ReactToHit();
+                    
+          enemyHealth.TakeDamage(food, pos);
         }
+
         else
         {
             Instantiate(cheeseSplats[Random.Range(0,1)], pos, rot);  

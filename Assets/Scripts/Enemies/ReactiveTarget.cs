@@ -9,6 +9,7 @@ public class ReactiveTarget : MonoBehaviour
         if (behavior != null)
         {
             behavior.SetAlive (false);
+
         }
         
         StartCoroutine (Die());

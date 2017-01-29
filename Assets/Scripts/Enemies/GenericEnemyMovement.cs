@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WanderingAI : MonoBehaviour
+public class GenericEnemyMovement : MonoBehaviour
 {
     public float speed = 3.0f;
     public float obstacleRange = 5.0f;
 
     private bool _alive;
+
+    public Transform target;
+    NavMeshAgent agent;
 
     [SerializeField] private GameObject fireballPrefab;
     private GameObject _fireball;
@@ -14,13 +17,19 @@ public class WanderingAI : MonoBehaviour
     void Start ()
     {
         _alive = true;
+        agent = GetComponent<NavMeshAgent>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
     
     void Update ()
     {
+
+        
+
         if (_alive)
         {
-            transform.Translate (0, 0, speed * Time.deltaTime);
+            agent.SetDestination(target.position);
         
             Ray ray = new Ray (transform.position, transform.forward);
             RaycastHit hit;
@@ -37,26 +46,15 @@ public class WanderingAI : MonoBehaviour
                         _fireball.transform.rotation =transform.rotation;
                     }
                 }
-                else if (hit.distance <obstacleRange)
-                {
-                    float angle = Random.Range (-110, 110);
-                    transform.Rotate (0, angle, 0);
-                }
-
-
-            if (Physics.SphereCast (ray, 0.5f, out hit))
-            {
-                if (hit.distance < obstacleRange)
-                {
-                float angle = Random.Range (-110, 110);
-                transform.Rotate (0, angle, 0);
-                }
-            }
-
-        
-            
+         
+       
             }
         }
+
+       /* if (!_alive)
+            //agent.velocity = Vector3.zero;
+            agent.Stop();
+            */
         
     }
 
