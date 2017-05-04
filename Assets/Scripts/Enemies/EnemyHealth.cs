@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour 
 {
-    public int startingHealth = 1;            // The amount of health the enemy starts the game with.
+    public int startingHealth = 3;            // The amount of health the enemy starts the game with.
     public int currentHealth;                   // The current health the enemy has.
     public float sinkSpeed = 1.0f;              // The speed at which the enemy sinks through the floor when dead.
     //public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
@@ -13,10 +13,12 @@ public class EnemyHealth : MonoBehaviour
     //Animator anim;                              // Reference to the animator.
    //AudioSource enemyAudio;                     // Reference to the audio source.
    // ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
-    BoxCollider boxCollider;            // Reference to the capsule collider.
-    bool isSated;                                // Whether the enemy is dead (sated).
+   public BoxCollider boxCollider;
+   public CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
+   public NCStatePatternEnemy enemy;
+    bool isAlive = true;                                // Whether the enemy is alive, acts as a switch for kinematic colliders
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
-
+    bool isHyper;                             //Whether the enemy is excited by food, and begins moving excitedly and dangerously
 
     void Awake ()
     {
@@ -25,6 +27,8 @@ public class EnemyHealth : MonoBehaviour
         //enemyAudio = GetComponent <AudioSource> ();
        //hitParticles = GetComponentInChildren <ParticleSystem> ();
         boxCollider = GetComponent <BoxCollider> ();
+        capsuleCollider = GetComponent <CapsuleCollider>();
+        enemy = GetComponent <NCStatePatternEnemy>();
 
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
@@ -35,16 +39,20 @@ public class EnemyHealth : MonoBehaviour
         // If the enemy should be sinking...
         if(isSinking)
         {
+            
             // ... move the enemy down by the sinkSpeed per second.
             transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
+            Debug.Log ("I'm sinking");
         }
+
+
     }
 
 
-    public void TakeDamage (int amount, Vector3 hitPoint)
+    public void TakeDamage(int amount, Vector3 hitPoint)
     {
         // If the enemy is dead...
-        if(isSated)
+        if (!isAlive)
             // ... no need to take damage so exit the function.
             return;
 
@@ -58,45 +66,94 @@ public class EnemyHealth : MonoBehaviour
         //hitParticles.transform.position = hitPoint;
 
         // And play the particles.
-       // hitParticles.Play();
+        // hitParticles.Play();
 
         // If the current health is less than or equal to zero...
-        if(currentHealth <= 0)
-        {
-            NachoCreeperMovement nachoCreeperMovement = GetComponent<NachoCreeperMovement>();
+        if (currentHealth <= 2)
+        {    
+            Debug.Log("health is 2, activate hyper mode");
+            NCStatePatternEnemy enemy = GetComponent <NCStatePatternEnemy>();
+
+
+            enemy.navMeshAgent.speed = 5.0f;
+            enemy.isHyper = true;
+        
+
+
+
+            /* NachoCreeperMovement nachoCreeperMovement = GetComponent<NachoCreeperMovement>();
+            NachoCreeperMovement_H nachoCreeperMovement_H = GetComponent<NachoCreeperMovement_H>();
             if (nachoCreeperMovement != null)
             {
-                nachoCreeperMovement.SetAlive (false);
-               
+                nachoCreeperMovement.enabled = false;
+            }
+            if (nachoCreeperMovement_H != null)
+            {
+                nachoCreeperMovement_H.enabled = true;
+            }*/
+        }
+
+
+        if (currentHealth <= 0)
+        {
+
+            
+
+
+            NCStatePatternEnemy nCStatePatternEnemy = GetComponent<NCStatePatternEnemy>();
+            if (nCStatePatternEnemy != null)
+            {
+                nCStatePatternEnemy.SetAlive(false);
+                Debug.Log ("I'm dead");
+
+                Die ();
+            }
+
+            NachoCreeperMovement_H nachoCreeperMovement_H = GetComponent<NachoCreeperMovement_H>();
+            if (nachoCreeperMovement_H != null)
+            {
+                nachoCreeperMovement_H.SetAlive (false);
+
+                Die ();
             }
 
             GenericEnemyMovement genericEnemyMovement = GetComponent<GenericEnemyMovement>();
             if (genericEnemyMovement != null)
             {
                 genericEnemyMovement.SetAlive (false);
-               
+
+                Die ();
             }
           
 
 
             // ... the enemy is dead.
-            Die ();
+
         }
     }
 
 
-    void Die ()
+    void Die()
     {
         // The enemy is dead.
+       
+        //enemy.GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
+        GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
 
-
-        isSated = true;
-
-       StartSinking ();
-
+        isAlive = false;
+        
         // Turn the collider into a trigger so shots can pass through it.
-        boxCollider.isTrigger = true;       
+        if (GetComponent<BoxCollider>() !=null)
+        {
+            boxCollider.isTrigger = true;       
+        }
 
+        else if (GetComponent<CapsuleCollider>() !=null)
+        {
+            capsuleCollider.isTrigger = true;       
+        }
+
+        StartSinking();
         // Tell the animator that the enemy is dead.
         //anim.SetTrigger ("Dead");
 
@@ -111,12 +168,12 @@ public class EnemyHealth : MonoBehaviour
     public void StartSinking ()
     {
         // Find and disable the Nav Mesh Agent.
-        GetComponent <NavMeshAgent> ().enabled = false;
+        //GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
 
         // Find the rigidbody component and make it kinematic (since we use Translate to sink the enemy).
         GetComponent <Rigidbody> ().isKinematic = true;
 
-        // The enemy should no sink.
+        // The enemy should now sink.
         isSinking = true;
 
         // Increase the score by the enemy's score value.

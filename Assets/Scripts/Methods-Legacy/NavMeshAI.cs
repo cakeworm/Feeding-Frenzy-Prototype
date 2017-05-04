@@ -4,12 +4,12 @@ using System.Collections;
 public class NavMeshAI : MonoBehaviour {
     
     public Transform target;
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
 
     // Use this for initialization
 	void Start () 
     {
-	    agent = GetComponent<NavMeshAgent>();
+	    agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	

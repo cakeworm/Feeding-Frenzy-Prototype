@@ -3,15 +3,15 @@ using System.Collections;
 
 public class NachoCreeperMovement : MonoBehaviour
 {
-    public float speed = 3.0f;
-    public float obstacleRange = 5.0f;
+   
 
-    private bool _alive;
+    private bool isAlive;
+    // should I use this movement script ever in the future, I'll need to make the underscore bools look like the isAlive convention above
     private bool _midrange;
     private bool _close;
 
     public Transform target;
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
 
     [SerializeField] private GameObject fireballPrefab;
     private GameObject _fireball;
@@ -19,10 +19,10 @@ public class NachoCreeperMovement : MonoBehaviour
     //START INITIALIZING
     void Start ()
     {
-        _alive = true;
+        isAlive = true;
         _midrange = false;
         _close = false;
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
@@ -30,7 +30,7 @@ public class NachoCreeperMovement : MonoBehaviour
     //UPDATES
     void Update()
     {
-        if (_alive)
+        if (isAlive)
         {          
             Follow();
 
@@ -60,7 +60,8 @@ public class NachoCreeperMovement : MonoBehaviour
                 {
                     Debug.Log("Enemy is far away and should be chasing!");
                     SetMidrange(false);
-                    agent.Resume();                           
+                    agent.Resume();
+                                               
                 }
 
                else if (Vector3.Distance(transform.position, target.position) <= 10.0f)
@@ -68,6 +69,7 @@ public class NachoCreeperMovement : MonoBehaviour
                     Debug.Log("Enemy is close and should be chasing!");               
                     SetMidrange(false);
                     agent.Resume();
+
                 }
 
                       
@@ -103,7 +105,7 @@ public class NachoCreeperMovement : MonoBehaviour
     // BOOLS 
     public void SetAlive (bool alive)
     {
-        _alive = alive;
+        isAlive = alive;
     }   
 
     public void SetMidrange(bool midrange)

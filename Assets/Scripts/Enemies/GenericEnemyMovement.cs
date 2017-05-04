@@ -6,18 +6,18 @@ public class GenericEnemyMovement : MonoBehaviour
     public float speed = 3.0f;
     public float obstacleRange = 5.0f;
 
-    private bool _alive;
+    private bool isAlive;
 
     public Transform target;
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
 
     [SerializeField] private GameObject fireballPrefab;
     private GameObject _fireball;
 
     void Start ()
     {
-        _alive = true;
-        agent = GetComponent<NavMeshAgent>();
+        isAlive = true;
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
@@ -27,7 +27,7 @@ public class GenericEnemyMovement : MonoBehaviour
 
         
 
-        if (_alive)
+        if (isAlive)
         {
             agent.SetDestination(target.position);
         
@@ -51,7 +51,7 @@ public class GenericEnemyMovement : MonoBehaviour
             }
         }
 
-       /* if (!_alive)
+       /* if (!isAlive)
             //agent.velocity = Vector3.zero;
             agent.Stop();
             */
@@ -60,7 +60,7 @@ public class GenericEnemyMovement : MonoBehaviour
 
     public void SetAlive (bool alive)
     {
-        _alive = alive;
+        isAlive = alive;
     }   
     
 

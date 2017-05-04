@@ -16,4 +16,6 @@ public class PlayerCharacter : MonoBehaviour
         _health -= damage;
         Debug.Log ("Health: " + _health);
     }
+
+ 
 }
