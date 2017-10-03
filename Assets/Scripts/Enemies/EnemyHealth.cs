@@ -26,8 +26,8 @@ public class EnemyHealth : MonoBehaviour
         //anim = GetComponent <Animator> ();
         //enemyAudio = GetComponent <AudioSource> ();
        //hitParticles = GetComponentInChildren <ParticleSystem> ();
-        boxCollider = GetComponent <BoxCollider> ();
-        capsuleCollider = GetComponent <CapsuleCollider>();
+        boxCollider = GetComponentInChildren <BoxCollider> ();
+        capsuleCollider = GetComponentInChildren <CapsuleCollider>();
         enemy = GetComponent <NCStatePatternEnemy>();
 
         // Setting the current health when the enemy first spawns.
@@ -81,15 +81,15 @@ public class EnemyHealth : MonoBehaviour
 
 
 
-            /* NachoCreeperMovement nachoCreeperMovement = GetComponent<NachoCreeperMovement>();
-            NachoCreeperMovement_H nachoCreeperMovement_H = GetComponent<NachoCreeperMovement_H>();
-            if (nachoCreeperMovement != null)
+            /* NachoBeastMovement nachoBeastMovement = GetComponent<NachoBeastMovement>();
+            NachoBeastMovement_H nachoBeastMovement_H = GetComponent<NachoBeastMovement_H>();
+            if (nachoBeastMovement != null)
             {
-                nachoCreeperMovement.enabled = false;
+                nachoBeastMovement.enabled = false;
             }
-            if (nachoCreeperMovement_H != null)
+            if (nachoBeastMovement_H != null)
             {
-                nachoCreeperMovement_H.enabled = true;
+                nachoBeastMovement_H.enabled = true;
             }*/
         }
 
@@ -109,10 +109,10 @@ public class EnemyHealth : MonoBehaviour
                 Die ();
             }
 
-            NachoCreeperMovement_H nachoCreeperMovement_H = GetComponent<NachoCreeperMovement_H>();
-            if (nachoCreeperMovement_H != null)
+            NachoBeastMovement_H nachoBeastMovement_H = GetComponent<NachoBeastMovement_H>();
+            if (nachoBeastMovement_H != null)
             {
-                nachoCreeperMovement_H.SetAlive (false);
+                nachoBeastMovement_H.SetAlive (false);
 
                 Die ();
             }

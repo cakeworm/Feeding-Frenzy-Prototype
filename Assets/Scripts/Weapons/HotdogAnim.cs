@@ -25,11 +25,7 @@ public class HotdogAnim : MonoBehaviour {
 
     void Swing ()
     {
-        //bool firePressed;
-
-        //firePressed = true;
-
-        anim.SetTrigger ("Fire Pressed");       
+       anim.SetTrigger ("Fire Pressed");       
     }
 
 

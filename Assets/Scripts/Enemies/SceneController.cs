@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     private GameObject _enemy_001;
 
-    [SerializeField]private GameObject enemy_nachoCreeper;
+    [SerializeField]private GameObject enemy_nachoBeast;
     private GameObject _enemy_002;
 
     [SerializeField]private GameObject enemy_hotdogTrapper;
@@ -28,7 +28,7 @@ public class SceneController : MonoBehaviour
 
         if (_enemy_002 == null)
         {
-            _enemy_002 = Instantiate (enemy_nachoCreeper) as GameObject;
+            _enemy_002 = Instantiate (enemy_nachoBeast) as GameObject;
             _enemy_002.transform.position = new Vector3 (6,1.07f,0);
             float angle = Random.Range (0,360);
             _enemy_002.transform.Rotate (0, angle, 0);
