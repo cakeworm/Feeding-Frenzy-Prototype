@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d685b0fddfe681646ba03d50c3ac1269
-timeCreated: 1499861735
+timeCreated: 1508653782
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -93,8 +93,11 @@ ModelImporter:
     400084: Upper_Right_Toe_R
     4300000: Main
     7400000: Default Take
-    7400002: jump
-    7400004: slowWalk
+    7400002: fastWalk_001
+    7400004: jump
+    7400006: fastWalk
+    7400008: passOut
+    7400010: slowWalk
     9500000: //RootNode
     13700000: Main
   materials:
@@ -121,9 +124,237 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Torso
+        weight: 1
+      - path: Armature/Torso/Lower_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L/Eye_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M/Eye_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R/Eye_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Upper_Lip
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw/Lower_Lip
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B/Lower_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B/Lower_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B/Lower_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L/Lower_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L/Lower_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L/Lower_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R/Lower_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R/Lower_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R/Lower_Right_Toe_R
+        weight: 1
+      - path: Main
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fastWalk_001
+      takeName: fastWalk_001
+      firstFrame: -1
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Torso
+        weight: 1
+      - path: Armature/Torso/Lower_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L/Eye_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M/Eye_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R/Eye_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Upper_Lip
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw/Lower_Lip
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B/Lower_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B/Lower_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B/Lower_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L/Lower_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L/Lower_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L/Lower_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R/Lower_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R/Lower_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R/Lower_Right_Toe_R
+        weight: 1
+      - path: Main
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: jump
       takeName: jump
-      firstFrame: 0
+      firstFrame: -1
       lastFrame: 18
       wrapMode: 0
       orientationOffsetY: 0
@@ -144,13 +375,241 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.68138796
+      - time: 0.7340425
         functionName: BeGrounded
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Torso
+        weight: 1
+      - path: Armature/Torso/Lower_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L/Eye_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M/Eye_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R/Eye_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Upper_Lip
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw/Lower_Lip
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B/Lower_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B/Lower_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B/Lower_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L/Lower_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L/Lower_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L/Lower_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R/Lower_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R/Lower_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R/Lower_Right_Toe_R
+        weight: 1
+      - path: Main
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fastWalk
+      takeName: fastWalk
+      firstFrame: -1
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Torso
+        weight: 1
+      - path: Armature/Torso/Lower_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_L/Upper_Eyestalk_L/Eye_L
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_M/Upper_Eyestalk_M/Eye_M
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Lower_Eyestalk_R/Upper_Eyestalk_R/Eye_R
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Head/Upper_Lip
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw
+        weight: 1
+      - path: Armature/Torso/Lower_Neck/Upper_Neck/Jaw/Lower_Lip
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Back_Toe_B/Lower_Back_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Left_Toe_B/Lower_Left_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_B/Lower_Leg_B/Upper_Right_Toe_B/Lower_Right_Toe_B
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Back_Toe_L/Lower_Back_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Left_Toe_L/Lower_Left_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_L/Lower_Leg_L/Upper_Right_Toe_L/Lower_Right_Toe_L
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Back_Toe_R/Lower_Back_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Left_Toe_R/Lower_Left_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R
+        weight: 1
+      - path: Armature/Torso/Upper_Leg_R/Lower_Leg_R/Upper_Right_Toe_R/Lower_Right_Toe_R
+        weight: 1
+      - path: Main
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: passOut
+      takeName: passOut
+      firstFrame: -1
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
       transformMask:
       - path: 
         weight: 1

@@ -5,14 +5,14 @@ using UnityEngine;
 public class NachoBeastJump : MonoBehaviour
 {
 
-    public NCStatePatternEnemy enemy;
+    public NBStatePatternEnemy enemy;
     public Rigidbody rigidbody;
     public Animator anim;
 
 
 	void Awake () 
     {
-        enemy = GetComponent<NCStatePatternEnemy>();
+        enemy = GetComponent<NBStatePatternEnemy>();
         rigidbody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 	}

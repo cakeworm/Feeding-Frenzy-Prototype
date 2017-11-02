@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PhysicsCollision : MonoBehaviour 
 {
-    public NCStatePatternEnemy enemy;
+    public NBStatePatternEnemy enemy;
 
     void Awake()
     {
-        enemy = transform.parent.GetComponent <NCStatePatternEnemy>();       
+        enemy = transform.parent.GetComponent <NBStatePatternEnemy>();       
     }
 
     void OnCollisionEnter (Collision collision)

@@ -6,7 +6,7 @@ public class NachoBeastChaseState : IEnemyState
 
 {
 
-    private readonly NCStatePatternEnemy enemy;
+    private readonly NBStatePatternEnemy enemy;
    
    
     private float chaseTimer;
@@ -18,7 +18,7 @@ public class NachoBeastChaseState : IEnemyState
  
 
 
-    public NachoBeastChaseState (NCStatePatternEnemy statePatternEnemy)
+    public NachoBeastChaseState (NBStatePatternEnemy statePatternEnemy)
     {
         enemy = statePatternEnemy;
     }
@@ -68,10 +68,7 @@ public class NachoBeastChaseState : IEnemyState
         Debug.Log ("Can't transition into same state");
     }
 
-    public void ToJumpState()
-    {
-        enemy.currentState = enemy.jumpState;
-    }
+
 
     public void ToCircleState ()
     {

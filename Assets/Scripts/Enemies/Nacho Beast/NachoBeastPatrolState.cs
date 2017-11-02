@@ -6,12 +6,12 @@ public class NachoBeastPatrolState :  IEnemyState
 
 {
 
-    private readonly NCStatePatternEnemy enemy;
+    private readonly NBStatePatternEnemy enemy;
     private int nextWayPoint;
    
 
 
-    public NachoBeastPatrolState(NCStatePatternEnemy statePatternEnemy)
+    public NachoBeastPatrolState(NBStatePatternEnemy statePatternEnemy)
     {
         enemy = statePatternEnemy;
     }
@@ -47,10 +47,7 @@ public class NachoBeastPatrolState :  IEnemyState
         enemy.currentState = enemy.chaseState;
     }
 
-    public void ToJumpState()
-    {
-        Debug.Log ("Can't jump on patrol.");
-    }
+ 
     public void ToCircleState ()
     {
         enemy.currentState = enemy.circleState;

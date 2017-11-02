@@ -6,7 +6,7 @@ public class OLDNachoBeastChaseState :  IEnemyState
 
 {
 
-    private readonly NCStatePatternEnemy enemy;
+    private readonly NBStatePatternEnemy enemy;
     private float chaseTimer;
     private bool isHyper = false;
     //public bool isGrounded = true;
@@ -22,7 +22,7 @@ public class OLDNachoBeastChaseState :  IEnemyState
     //float jumpPosZ;
 
 
-    public OLDNachoBeastChaseState (NCStatePatternEnemy statePatternEnemy)
+    public OLDNachoBeastChaseState (NBStatePatternEnemy statePatternEnemy)
     {
         enemy = statePatternEnemy;
     }
@@ -90,10 +90,7 @@ public class OLDNachoBeastChaseState :  IEnemyState
         Debug.Log ("Can't transition into same state");
     }
 
-    public void ToJumpState()
-    {
-        enemy.currentState = enemy.jumpState;
-    }
+
 
     public void ToCircleState ()
     {

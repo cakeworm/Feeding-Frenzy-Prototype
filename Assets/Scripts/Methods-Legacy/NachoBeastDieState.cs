@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NachoBeastDieState : IEnemyState 
 {
-    private readonly NCStatePatternEnemy enemy;   
+    private readonly NBStatePatternEnemy enemy;   
 
-    public NachoBeastDieState (NCStatePatternEnemy statePatternEnemy)
+    public NachoBeastDieState (NBStatePatternEnemy statePatternEnemy)
     {
         enemy = statePatternEnemy;
     }

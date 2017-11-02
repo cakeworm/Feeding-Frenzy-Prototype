@@ -6,9 +6,9 @@ public class DisattachReattachNavMesh : MonoBehaviour {}
 /*
 {
 
-    private readonly NCStatePatternEnemy enemy;
+    private readonly NBStatePatternEnemy enemy;
 
-    public NachoBeastChaseState (NCStatePatternEnemy statePatternEnemy)
+    public NachoBeastChaseState (NBStatePatternEnemy statePatternEnemy)
     {
         enemy = statePatternEnemy;
     }

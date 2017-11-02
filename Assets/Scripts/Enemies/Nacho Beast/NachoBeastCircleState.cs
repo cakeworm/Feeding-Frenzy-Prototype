@@ -5,9 +5,9 @@ using UnityEngine;
 public class NachoBeastCircleState : IEnemyState 
 
 {
-    private readonly NCStatePatternEnemy enemy;   
+    private readonly NBStatePatternEnemy enemy;   
 
-    public NachoBeastCircleState (NCStatePatternEnemy statePatternEnemy)
+    public NachoBeastCircleState (NBStatePatternEnemy statePatternEnemy)
     {
         enemy = statePatternEnemy;
     }
@@ -43,10 +43,7 @@ public class NachoBeastCircleState : IEnemyState
          
     }
 
-    public void ToJumpState()
-    {
-        enemy.currentState = enemy.jumpState;
-    }
+ 
 
     public void ToCircleState ()
     {
